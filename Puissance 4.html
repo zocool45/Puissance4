@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Puissance 4</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="mode-select">
+    <h2>Choisissez un mode de jeu :</h2>
+    <button id="vs-player">Joueur vs Joueur</button>
+    <button id="vs-ai">Joueur vs Ordinateur</button>
+  </div>
+
+  <div id="game-container" style="display: none;">
+    <div id="scoreboard">
+      <p><span id="name-red">Rouge</span> : <span id="score-red">0</span></p>
+      <p><span id="name-yellow">Jaune</span> : <span id="score-yellow">0</span></p>
+    </div>
+
+    <div id="game-board"></div>
+    <p id="status">En attente...</p>
+  </div>
+
+  <div id="buttons">
+    <div id="left-buttons">
+      <button id="customize-btn">Personnaliser</button>
+      <button id="quit-btn">Quitter</button>
+    </div>
+    <div id="right-buttons">
+      <button id="reset-btn">Recommencer</button>
+      <button id="change-mode-btn">Changer de mode</button>
+    </div>
+  </div>
+
+  <div id="customization-panel" style="display: none;">
+    <h3>Personnalisation</h3>
+    <label>Couleur de la grille : <input type="color" id="color-grid" value="#0077b6" /></label><br/>
+    <label>Couleur du fond : <input type="color" id="color-bg" value="#f0f0f0" /></label><br/>
+    <label>Image de fond : <input type="file" id="bg-image-file" accept="image/*" /></label><br/>
+    <label>Couleur du texte : <input type="color" id="color-text" value="#000000" /></label><br/>
+    <label>Nom joueur 1 : <input type="text" id="name-red-input" placeholder="Rouge" /></label><br/>
+    <label>Nom joueur 2 : <input type="text" id="name-yellow-input" placeholder="Jaune / IA" /></label><br/>
+    <button id="close-customization">Fermer</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
